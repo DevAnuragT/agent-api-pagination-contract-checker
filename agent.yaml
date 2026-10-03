@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: api-pagination-contract-checker
+version: 0.1.0
+description: "Reviews pagination evidence for stable ordering, bounded pages, and continuation behavior."
+skills:
+  - api-pagination-contract-checker-skill
+tools:
+  - audit-api-pagination-contract-checker
+tags:
+  - Developer tools
+  - evidence-driven

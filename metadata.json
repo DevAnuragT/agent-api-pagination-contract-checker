@@ -1,0 +1,35 @@
+{
+  "slug": "api-pagination-contract-checker",
+  "title": "API Pagination Contract Checker",
+  "category": "Developer tools",
+  "description": "Reviews pagination evidence for stable ordering, bounded pages, and continuation behavior.",
+  "decision": "Reviews pagination evidence for stable ordering, bounded pages, and continuation behavior.",
+  "limitations": "Uses caller-declared evidence only; does not verify external systems, legal requirements, or real-world truth. Human review remains required.",
+  "inputs": "A JSON object containing the documented fields. Numeric thresholds are deterministic and visible in agent.py.",
+  "good": {
+    "maximum_page_size": 100,
+    "stable_sort_key": "created_at,id",
+    "continuation_token_tested": true
+  },
+  "bad": {},
+  "rules": [
+    [
+      "maximum_page_size",
+      "maximum page size",
+      "max",
+      500
+    ],
+    [
+      "stable_sort_key",
+      "stable sort key",
+      "required",
+      null
+    ],
+    [
+      "continuation_token_tested",
+      "continuation token test",
+      "true",
+      null
+    ]
+  ]
+}
